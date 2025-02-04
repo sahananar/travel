@@ -3,11 +3,11 @@ import os
 import requests
 
 # Load API Key
-GOOGLE_API_KEY = 'AIzaSyAG37BYDeksPRqT8XcbObxD01cH0gqkOAc'
-gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
+# GOOGLE_API_KEY = 
+# gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
-GOOGLE_SEARCH_API_KEY = 'AIzaSyBYLnY8-h7BMYTYVPSaT_Dv0fg7bIAn8uQ'
-SEARCH_ENGINE_ID = "9477c3a5965a14b30"
+# GOOGLE_SEARCH_API_KEY =
+# SEARCH_ENGINE_ID =
 
 def fetch_tripadvisor_insights(place):
     """Fetch top TripAdvisor user review insights using Google Search API."""

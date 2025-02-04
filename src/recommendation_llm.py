@@ -3,7 +3,7 @@ import requests
 #from api import fetch_travel_destinations
 
 # Load API Key
-HUGGINGFACE_API_KEY = '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'
+#HUGGINGFACE_API_KEY = 
 
 def format_destinations(destinations):
     """Format travel destinations into a readable list for the LLM."""
