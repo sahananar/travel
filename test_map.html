@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_304793392646c668bb2e0a09f021bac1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_304793392646c668bb2e0a09f021bac1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_304793392646c668bb2e0a09f021bac1 = L.map(
+                "map_304793392646c668bb2e0a09f021bac1",
+                {
+                    center: [35.308495199999996, 24.46334231842296],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1e3e23d521ebd908f4b7ebd3fdcc7319 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1e3e23d521ebd908f4b7ebd3fdcc7319.addTo(map_304793392646c668bb2e0a09f021bac1);
+        
+    
+            var marker_3739ec4fa312d94097e0ee59a3556a8d = L.marker(
+                [35.308495199999996, 24.46334231842296],
+                {
+}
+            ).addTo(map_304793392646c668bb2e0a09f021bac1);
+        
+    
+            var icon_b5d6a53bfd61e39ac5110681a3efe6c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "arrow-up",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-180",
+}
+            );
+            marker_3739ec4fa312d94097e0ee59a3556a8d.setIcon(icon_b5d6a53bfd61e39ac5110681a3efe6c7);
+        
+    
+        var popup_dbced866ea1de40700b328a02bfd19c8 = L.popup({
+  "maxWidth": 300,
+  "minWidth": 300,
+});
+
+        
+            
+                var html_d9549b350c6716624f2c3093fbbb0c94 = $(`<div id="html_d9549b350c6716624f2c3093fbbb0c94" style="width: 100.0%; height: 100.0%;"><b>Crete, Greece</b><br></div>`)[0];
+                popup_dbced866ea1de40700b328a02bfd19c8.setContent(html_d9549b350c6716624f2c3093fbbb0c94);
+            
+        
+
+        marker_3739ec4fa312d94097e0ee59a3556a8d.bindPopup(popup_dbced866ea1de40700b328a02bfd19c8)
+        ;
+
+        
+    
+    
+            marker_3739ec4fa312d94097e0ee59a3556a8d.bindTooltip(
+                `<div>
+                     Click for details about Crete, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9e2d206133f8695e93abf20239bafcfc = L.marker(
+                [36.4071112, 25.456663652707153],
+                {
+}
+            ).addTo(map_304793392646c668bb2e0a09f021bac1);
+        
+    
+            var icon_4aa84df3b08112f5261464035a8d4817 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "arrow-up",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-180",
+}
+            );
+            marker_9e2d206133f8695e93abf20239bafcfc.setIcon(icon_4aa84df3b08112f5261464035a8d4817);
+        
+    
+        var popup_19ff37b78f68e961255364a01930dd3c = L.popup({
+  "maxWidth": 300,
+  "minWidth": 300,
+});
+
+        
+            
+                var html_92ec709829ba2608cfb217635c446e63 = $(`<div id="html_92ec709829ba2608cfb217635c446e63" style="width: 100.0%; height: 100.0%;"><b>Santorini, Greece</b><br></div>`)[0];
+                popup_19ff37b78f68e961255364a01930dd3c.setContent(html_92ec709829ba2608cfb217635c446e63);
+            
+        
+
+        marker_9e2d206133f8695e93abf20239bafcfc.bindPopup(popup_19ff37b78f68e961255364a01930dd3c)
+        ;
+
+        
+    
+    
+            marker_9e2d206133f8695e93abf20239bafcfc.bindTooltip(
+                `<div>
+                     Click for details about Santorini, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05f20e851c5f2b6266abe6dfa1749bfc = L.marker(
+                [37.9755648, 23.7348324],
+                {
+}
+            ).addTo(map_304793392646c668bb2e0a09f021bac1);
+        
+    
+            var icon_391a80859752f3abf8be430e48d97e08 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "arrow-up",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-180",
+}
+            );
+            marker_05f20e851c5f2b6266abe6dfa1749bfc.setIcon(icon_391a80859752f3abf8be430e48d97e08);
+        
+    
+        var popup_c17dba1901eb4779cd3631f80fd0d281 = L.popup({
+  "maxWidth": 300,
+  "minWidth": 300,
+});
+
+        
+            
+                var html_3b361b8ed8cae6f108fbf57647937838 = $(`<div id="html_3b361b8ed8cae6f108fbf57647937838" style="width: 100.0%; height: 100.0%;"><b>Athens, Greece</b><br></div>`)[0];
+                popup_c17dba1901eb4779cd3631f80fd0d281.setContent(html_3b361b8ed8cae6f108fbf57647937838);
+            
+        
+
+        marker_05f20e851c5f2b6266abe6dfa1749bfc.bindPopup(popup_c17dba1901eb4779cd3631f80fd0d281)
+        ;
+
+        
+    
+    
+            marker_05f20e851c5f2b6266abe6dfa1749bfc.bindTooltip(
+                `<div>
+                     Click for details about Athens, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_abac2660a2038c154556cb70f4840d72 = L.marker(
+                [37.45139365, 25.39231486780794],
+                {
+}
+            ).addTo(map_304793392646c668bb2e0a09f021bac1);
+        
+    
+            var icon_a4fb00982474d60a1bbd6dc8b39c44ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "arrow-up",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-180",
+}
+            );
+            marker_abac2660a2038c154556cb70f4840d72.setIcon(icon_a4fb00982474d60a1bbd6dc8b39c44ee);
+        
+    
+        var popup_b44067544a80a6c98e043f85b1c59b56 = L.popup({
+  "maxWidth": 300,
+  "minWidth": 300,
+});
+
+        
+            
+                var html_97075fd711b2b200143bb890d72fa95f = $(`<div id="html_97075fd711b2b200143bb890d72fa95f" style="width: 100.0%; height: 100.0%;"><b>Mykonos, Greece</b><br></div>`)[0];
+                popup_b44067544a80a6c98e043f85b1c59b56.setContent(html_97075fd711b2b200143bb890d72fa95f);
+            
+        
+
+        marker_abac2660a2038c154556cb70f4840d72.bindPopup(popup_b44067544a80a6c98e043f85b1c59b56)
+        ;
+
+        
+    
+    
+            marker_abac2660a2038c154556cb70f4840d72.bindTooltip(
+                `<div>
+                     Click for details about Mykonos, Greece
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
