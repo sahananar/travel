@@ -12,3 +12,9 @@ requests==2.32.3
 tqdm==4.67.1
 typing-extensions==4.12.2
 urllib3==2.3.0
+streamlit
+requests
+python-dotenv
+folium
+geopy
+streamlit_folium
