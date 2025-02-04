@@ -1,8 +1,11 @@
 import streamlit as st
-from src.recommendation_llm import generate_recommendations_llama, extract_recommendations, extract_place_names
-from src.map_utils import create_map, get_place_image
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
+
+from recommendation_llm import generate_recommendations_llama, extract_recommendations, extract_place_names
+from map_utils import create_map, get_place_image
 from streamlit_folium import folium_static
-import re
 
 st.header("Welcome to the TravelBot! I'm here to help you find your next travel destination 🌍")
 st.write("Tell me where you've been and where you want to go, and I'll give you the top 5 places you could travel to next!")
