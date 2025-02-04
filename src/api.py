@@ -1,13 +1,16 @@
 import googlemaps
 import os
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Load API Key
-# GOOGLE_API_KEY = 
-# gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY ")
+gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
-# GOOGLE_SEARCH_API_KEY =
-# SEARCH_ENGINE_ID =
+GOOGLE_SEARCH_API_KEY = os.getenv("GOOGLE_SEARCH_API_KEY ")
+SEARCH_ENGINE_ID = os.getenv("SEARCH_ENGINE_ID")
 
 def fetch_tripadvisor_insights(place):
     """Fetch top TripAdvisor user review insights using Google Search API."""

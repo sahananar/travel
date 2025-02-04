@@ -1,9 +1,11 @@
 import os
 import requests
 #from api import fetch_travel_destinations
+from dotenv import load_dotenv
 
-# Load API Key
-#HUGGINGFACE_API_KEY = 
+load_dotenv()
+
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 
 def format_destinations(destinations):
     """Format travel destinations into a readable list for the LLM."""
@@ -12,7 +14,7 @@ def format_destinations(destinations):
 
     return "\n".join([
         f"{i+1}. {place['name']} ({place['city']}) - ⭐ {place['rating']} \n   📍 {place['address']}"
-        for i, place in enumerate(destinations[:5])  # Limit to top 5
+        for i, place in enumerate(destinations[:5])
     ])
 
 def generate_recommendations_llama(past_travel, travel_preferences):
