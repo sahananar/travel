@@ -2,10 +2,12 @@ import os
 import requests
 from dotenv import load_dotenv
 import re
+import streamlit as st#
 
 load_dotenv()
 
-HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+#HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+HUGGINGFACE_API_KEY = st.secrets["HUGGINGFACE_API_KEY"]
 
 def extract_recommendations(output):
 
