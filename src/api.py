@@ -3,7 +3,7 @@ import os
 import requests
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override = True)
 
 # Load API Key
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY ")

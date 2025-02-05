@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 import re
 
-load_dotenv()
+load_dotenv(override = True)
 
 geolocator = Nominatim(user_agent="travel_recommender")
 
