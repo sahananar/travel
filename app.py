@@ -32,3 +32,5 @@ if st.button("Get Travel Recommendations"):
     else:
         st.warning("Please enter both past travels and preferences.")
 
+st.write(f"🔍 Hugging Face API Key: {st.secrets.get('HUGGINGFACE_API_KEY', '❌ Not Found')}")
+st.write(f"🔍 Google API Key: {st.secrets.get('GOOGLE_API_KEY', '❌ Not Found')}")
