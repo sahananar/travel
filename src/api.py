@@ -2,26 +2,15 @@ import googlemaps
 import os
 import requests
 from dotenv import load_dotenv
-import streamlit as st
 
 load_dotenv()
 
 # Load API Key
-try:
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY ")
-except:
-    GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY ")
 gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
-try:
-    GOOGLE_SEARCH_API_KEY = os.getenv('GOOGLE_SEARCH_API_KEY')
-except:
-    GOOGLE_SEARCH_API_KEY = st.secrets['GOOGLE_SEARCH_API_KEY']
-
-try:
-    SEARCH_ENGINE_ID = os.getenv('SEARCH_ENGINE_ID')
-except:
-    SEARCH_ENGINE_ID = st.secrets['SEARCH_ENGINE_ID']
+GOOGLE_SEARCH_API_KEY = os.getenv("GOOGLE_SEARCH_API_KEY ")
+SEARCH_ENGINE_ID = os.getenv("SEARCH_ENGINE_ID")
 
 def fetch_tripadvisor_insights(place):
     """Fetch top TripAdvisor user review insights using Google Search API."""

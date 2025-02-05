@@ -5,6 +5,7 @@ import streamlit as st
 from streamlit_folium import folium_static
 import os
 from dotenv import load_dotenv
+import re
 
 load_dotenv()
 
@@ -23,10 +24,7 @@ def get_location_coordinates(place):
 
 def get_place_image(query):
     
-    try:
-        UNSPLASH_ACCESS_KEY = st.secrets["UNSPLASH_KEY"]
-    except:
-        UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_KEY")
+    UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_KEY")
 
     if not UNSPLASH_ACCESS_KEY:
         print("Error: Unsplash API key is missing.")

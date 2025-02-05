@@ -2,15 +2,10 @@ import os
 import requests
 from dotenv import load_dotenv
 import re
-import streamlit as st
 
 load_dotenv()
 
-try:
-    HUGGINGFACE_API_KEY = st.secrets["HUGGINGFACE_API_KEY"]
-except:
-    # ✅ If running locally, load from environment variables
-    HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 
 def extract_recommendations(output):
 
