@@ -31,3 +31,4 @@ if st.button("Get Travel Recommendations"):
                 st.warning("⚠️ No locations found in the AI response.")
     else:
         st.warning("Please enter both past travels and preferences.")
+
