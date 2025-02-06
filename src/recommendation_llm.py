@@ -36,40 +36,6 @@ def extract_place_names(recommendations):
 
     return recommended_places
 
-# def generate_recommendations_llama(past_travel, travel_preferences):
-    
-#     API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
-#     headers = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"}
-
-#     places = [place.strip() for place in past_travel.split(",") if place.strip()]
-#     if not places:
-#         return "No valid places detected in past travel input. Please try again."
-
-#     prompt = f"""
-#     The user has previously traveled to: {', '.join(places)}.
-#     They are looking for a destination that matches these preferences: {travel_preferences}.
-
-#     Given this information, suggest the best 5 destinations and explain why they match the user's interests.
-
-#     ### Instructions:
-#     - List exactly 5 destinations.
-#     - Each destination should follow this strict format:  
-#     `1. <City, Country>: <Brief description>`
-#     - Do NOT use "Destination 1", "Option 1", or any other variation—only the numbers `1.` to `5.`.
-#     - Ensure each destination is on a new line.
-
-#     Now, generate your recommendations in this exact format:
-#     """
-
-#     payload = {"inputs": prompt, "parameters": {"temperature": 0.7, "max_length": 500}}
-
-#     response = requests.post(API_URL, headers=headers, json=payload)
-
-#     if response.status_code == 200:
-#         return response.json()[0]["generated_text"]
-#     else:
-#         return f"Error: {response.json()}"
-
 def generate_recommendations_llama(past_travel, travel_preferences):
     
     API_URL = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
@@ -97,16 +63,7 @@ def generate_recommendations_llama(past_travel, travel_preferences):
 
     payload = {"inputs": prompt, "parameters": {"temperature": 0.7, "max_length": 500}}
 
-    # 🚨 Debugging: Print what is being sent
-    print(f"🔍 DEBUG - Sending Request to: {API_URL}")
-    print(f"🔍 DEBUG - Headers: {headers}")
-    print(f"🔍 DEBUG - Payload: {payload}")
-
     response = requests.post(API_URL, headers=headers, json=payload)
-
-    # 🚨 Debugging: Print Full Response
-    print(f"🔍 DEBUG - Response Status: {response.status_code}")
-    print(f"🔍 DEBUG - Response Content: {response.json()}")
 
     if response.status_code == 200:
         return response.json()[0]["generated_text"]
